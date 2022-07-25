@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title> Concurso Tringle Peças </title>
+    <meta chatset="utf-8" />
+</head>
+
+
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <img src="img/logoempresa2.png" width="100" height="80">
+            </td>
+            <td>
+                <h3>
+                    <font color="blue"> TRINGLE PEÇAS </font>
+                </h3>
+                <p> <em> A solução dos seus problemas </em> </p>
+            </td>
+        </tr>
+    </table>
+    <br /> <br /> <br /> <br />
+    <font face="arial, times new roman">
+        <br />
+        <h2 align="center"> Formulário de Inscrição em Concurso </h2>
+        <p align="center"> Obrigado pelo seu interesse em nossa empresa. Para dar sequência ao nosso
+            processo seletivo, por favor, preencha com seus dados. <br /> As inscrições segurão
+            abertas até às 23:59 do dia 28/07/2022. Após este período, o local da sua prova
+            será dispobilizado em algum de seus meios de contato.
+        </p>
+        <br />
+        <hr color="gray" />
+        <form action="#" method="post" name="cadastro">
+            <table width="750" align="center">
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend align="left"> Informe seus Dados </legend>
+                            <!-- Responsavel pelo funcionamento do formulario //action = chama um arquivo pra armazenar o dado informado //metod metodo de envio // post é que deixa os dados ocultos// get mostra todos os dados no url-->
+                            <table cellpadding="10">
+                                <tr>
+                                    <td><label> Nome: </label> </td>
+                                    <!-- 2 tipos de label, pode ser explicito ou implicito-->
+                                    <td> <input type="text" id="nome" name="nome" size="50" maxlength="40"
+                                            placeholder="Digite seu nome completo" required /> </td>
+                                    <!-- id e nome podem ser usados como variaveis mais pra frente //maxlenght limita a quantidade de caracteres// size é o tamanho do campo que aparece-->
+                                </tr>
+                                <tr>
+                                    <td> <label> E-mail: </label> </td>
+                                    <td> <input type="email" id="mail" name="mail" size="50"
+                                            placeholder="Digite seu E-mail corretamente" required /> </td>
+                                    <!-- tipo email ja faz a validaçao-->
+                                </tr>
+                                <tr>
+                                    <td> <label> Telefone: </label> </td>
+                                    <td> <input type="tel" id="telefone" name="telefone" size="35"
+                                            placeholder="Informe seu telefone (XX) XXXXX-XXXXX" required /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> CPF: </label> </td>
+                                    <td> <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" id="cpf" name="cpf"
+                                            size="35" placeholder="Digite seu CPF no formato XXX.XXX.XXX-XX" required />
+                                    </td>
+                                    <td> <label> RG: </label></td>
+                                    <td> <input type="text" id="rg" name="rg" size="35"
+                                            placeholder="Digite seu RG no formato XX-XX.XXX.XXX" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Data de Nascimento: </label> </td>
+                                    <td> <input type="date" id="data_nasc" name="data_nasc" max="2004-12-31" required />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Sexo: </label> </td>
+                                    <td> <label> <input type="radio" id="sexo" name="sexo" value="M" required />
+                                            Masculino </label>
+                                        <!--value é usado para já deixar valores pre definidos. pode ser usado no nome da pessoa por exemplo. IDS e names iguais fazem a pessoa ter que escolher entre um e outro, se for diferente, dá para marcar os 3-->
+                                        <label> <input type="radio" id="sexo" name="sexo" value="F" required />
+                                            Feminino </label>
+                                        <label> <input type="radio" id="sexo" name="sexo" value="outro" />
+                                            Outro: </label>
+                                        <input type="text" id="outro" name="outro" size="10" disabled />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Nome da mãe: </label> </td>
+                                    <td> <input type="text" id="mae" name="mae" size="40"
+                                            placeholder="Informe o nome completo da sua mãe" required /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Nome do pai: </label> </td>
+                                    <td> <input type="text" id="pai" name="pai" size="40"
+                                            placeholder="Informe o nome completo do seu pai (Opcional)" /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Escolaridade: </label> </td>
+                                    <td> <select id="escolaridade" name="escolidade" required>
+                                            <option value="" selected="selected" align="center"> ----------- Selecione
+                                                ----------- </option>
+                                            <option value="EFI"> Ensino Fundamental Incompleto </option>
+                                            <option value="EFC"> Ensino Fundamental Completo </option>
+                                            <option value="EMI"> Ensino Médio Incompleto </option>
+                                            <option value="EMC"> Ensino Médio Completo </option>
+                                            <option value="SC"> Superior Completo </option>
+
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Estado: </label> </td>
+                                    <td> <select id="estado" name="estado" required>
+                                            <option value="" selected="selected" align="center"> ------ Selecione ------
+                                            </option> <!-- selected selected para já começar por este-->
+                                            <optgroup label="Norte">
+                                                <option value="AC">Acre</option>
+                                                <option value="AP">Amapá</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="PA">Pará</option>
+                                                <option value="RR">Roraima</option>
+                                                <option value="TO">Tocantins</option>
+                                                <option value="RO">Rondônia</option>
+                                            </optgroup>
+
+                                            <optgroup label="Nordeste">
+                                                <option value="AL">Alagoas</option>
+                                                <option value="BA">Bahia</option>
+                                                <option value="CE">Ceará</option>
+                                                <option value="RN">Rio Grande do Norte</option>
+                                                <option value="MA">Maranhão</option>
+                                                <option value="PB">Paraíba</option>
+                                                <option value="SE">Sergipe</option>
+                                                <option value="PE">Pernambuco</option>
+                                                <option value="PI">Piauí</option>
+                                            </optgroup>
+
+                                            <optgroup label="Centro Oeste">
+                                                <option value="DF">Distrito Federal</option>
+                                                <option value="GO">Goiás</option>
+                                                <option value="MT">Mato Grosso</option>
+                                                <option value="MS">Mato Grosso do Sul</option>
+                                            </optgroup>
+
+                                            <optgroup label="Sudeste">
+                                                <option value="ES">Espírito Santo</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="SP">São Paulo</option>
+                                            </optgroup>
+
+                                            <optgroup label="Sul">
+                                                <option value="RS">Rio Grande do Sul</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="PR">Paraná</option>
+                                            </optgroup>
+                                        </select> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> CEP: </label> </td>
+                                    <td> <input type="text" id="cep" name="cep" size="20"
+                                            placeholder="Informe o seu CEP" required /> </td>
+                                    <td> <label> Bairro: </label> </td>
+                                    <td> <input type="text" id="bairro" name="bairro" size="40"
+                                            placeholder="Informe o seu Bairro" required /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label> Endereço: </label> </td>
+                                    <td> <input type="text" id="endereco" name="endereco" size="40"
+                                            placeholder="Informe o seu endereço e número" required /> </td>
+                                </tr>
+                    </td>
+                </tr>
+            </table>
+            </td>
+            </tr>
+            </table>
+            </fieldset>
+            <table align="center">
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend align="left"> Fotos obrigatórias </legend>
+                            <table width="940" align="center" cellpadding="12">
+                                <tr>
+                                    <td> <label> Foto da Identidade (Frente): </label> </td>
+                                    <td> <input type="file" id="anexar" name="anexar" required /> </td>
+                                    <br />
+                                </tr>
+                                <tr>
+                                    <td> <label> Foto da Identidade (Verso): </label> </td>
+                                    <td> <input type="file" id="anexar" name="anexar" required /> </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <input type="reset" id="limpar" name="limpar" value="LIMPAR" />
+                                        <input type="submit" id="enviar" name="enviar" value="ENVIAR" />
+                                        <br />
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </font>
+</body>
+</html>
